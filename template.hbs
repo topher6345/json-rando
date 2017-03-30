@@ -1,0 +1,40 @@
+{
+  "account": {
+    "id": {{int 10000 60000}},
+    "name": "{{firstName}} {{lastName}}",
+    "work": "{{company}}",
+    "email": "{{email}}",
+    "dob": "{{date '1900' '2000' 'YYYY'}}",
+    "address": "{{int 1 100}} {{street}}",
+    "city": "{{city}}",
+    "optedin": {{boolean}},
+    "subscriptions": [
+      {{#repeat 6}}
+      {
+        "id": {{@index}},
+        "name": "{{firstName}} {{lastName}}",
+        "work": "{{company}}",
+        "email": "{{email}}",
+        "dob": "{{date '1900' '2000' 'YYYY'}}",
+        "address": "{{int 1 100}} {{street}}",
+        "city": "{{city}}",
+        "optedin": {{boolean}}
+      },
+      {{/repeat}}
+    ],
+    "users": [
+      {{#repeat 3}}
+       {
+          "id": {{@index}},
+          "name": "{{firstName}} {{lastName}}",
+          "work": "{{company}}",
+          "email": "{{email}}",
+          "dob": "{{date '1900' '2000' 'YYYY'}}",
+          "address": "{{int 1 100}} {{street}}",
+          "city": "{{city}}",
+          "optedin": {{boolean}}
+        },
+      {{/repeat}}
+    ]
+  }
+}
